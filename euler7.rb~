@@ -1,0 +1,19 @@
+class Euler7
+  def solve(count)
+    if count == 1 then 2 elsif count == 2 then 3
+    else
+      i = 1
+      prime = 0
+      bounds = count - 2
+      while i <= bounds do
+        prime = (6 * i - 1) if i <= bounds
+        p "Prime #{i+2} is #{prime}"
+        i = i + 1
+        primes = (6 * i + 1) if i <= bounds
+        p "Prime #{i+2} is #{prime}"
+        i = i + 1
+      end
+      prime
+    end
+  end
+end
